@@ -1,0 +1,34 @@
+import { ReactElement } from "react";
+import { Image } from "@chakra-ui/react";
+
+export type pathType = {
+  title?: string;
+  path?: string;
+  url?: string;
+  icon?: ReactElement;
+  alt?: string;
+};
+
+export const paths: pathType[] = [
+  {
+    title: "About",
+    path: "/about",
+  },
+  {
+    title: "Work",
+    path: "/work",
+  },
+  {
+    title: "Gallery",
+    path: "/gallery",
+  },
+  {
+    title: "Contacts",
+    path: "/contacts",
+  },
+  {
+    icon: <Image src="/assets/icons/github.svg" alt="Github icon" />,
+    url: "https://github.com/QuadieZ",
+    alt: "Github",
+  },
+];
