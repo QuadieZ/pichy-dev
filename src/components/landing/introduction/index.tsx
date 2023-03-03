@@ -52,7 +52,7 @@ export const IntroductionSection = ({ parallax }: SectionProps) => {
       >
         <Image
           src={"/assets/landing_page_elements/char.svg"}
-          alt="cloud"
+          alt="cartoon character of Pich"
           h="125%"
           ml="35vw"
           display={["none", "none", "none", "block"]}
