@@ -7,7 +7,7 @@ import { Typography } from "../Typography";
 import { pathType } from "./paths";
 
 export const NavItem = (props: pathType) => {
-  const { path, title, icon, url } = props;
+  const { path, title, icon, url, onClick } = props;
   const { push, asPath } = useRouter();
   const isActive = asPath == path;
 
@@ -17,7 +17,7 @@ export const NavItem = (props: pathType) => {
         {children}
       </Link>
     ) : (
-      <Flex onClick={() => path && push(path)}>{children}</Flex>
+      <Flex onClick={() => onClick ?? (path && push(path))}>{children}</Flex>
     );
 
   return (
@@ -32,6 +32,10 @@ export const NavItem = (props: pathType) => {
           whileHover={{ scale: 1.1 }}
           cursor="pointer"
           color="content.secondary"
+          bg={isActive ? "white" : "none"}
+          py={1}
+          px={6}
+          borderRadius="full"
         >
           {title}
         </Typography>

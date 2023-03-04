@@ -40,7 +40,11 @@ export const StyledButton = (props: StyledButtonProps) => {
 
   const Container = ({ children }: { children: ReactNode }) =>
     href ? (
-      <Link href={href} passHref={true} target="_blank">
+      <Link
+        href={href}
+        passHref={true}
+        target={!href.includes("#") ? "_blank" : ""}
+      >
         {children}
       </Link>
     ) : (

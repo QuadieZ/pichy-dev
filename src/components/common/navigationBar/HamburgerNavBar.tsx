@@ -12,7 +12,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export const HamburgerNavBar = () => {
-  const { push } = useRouter();
+  const { push, asPath } = useRouter();
   return (
     <Menu>
       <MenuButton
@@ -27,6 +27,7 @@ export const HamburgerNavBar = () => {
       />
       <MenuList>
         {paths.map((el) => {
+          const isActive = asPath == el.path;
           const Container = ({ children }: { children: ReactNode }) =>
             el.url ? (
               <Link href={el.url}>{children}</Link>
@@ -35,7 +36,11 @@ export const HamburgerNavBar = () => {
             );
           return (
             <Container key={el.title}>
-              <MenuItem icon={el.icon} onClick={() => el.path && push(el.path)}>
+              <MenuItem
+                icon={el.icon}
+                onClick={() => el.path && push(el.path)}
+                bg={isActive ? "brand.primary" : "none"}
+              >
                 {el.title ?? el.alt}
               </MenuItem>
             </Container>
