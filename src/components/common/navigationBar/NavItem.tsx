@@ -13,7 +13,7 @@ export const NavItem = (props: pathType) => {
 
   const Container = ({ children }: { children: ReactNode }) =>
     url ? (
-      <Link href={url} target="_blank">
+      <Link href={url} target={!url.includes("#") ? "_blank" : ""}>
         {children}
       </Link>
     ) : (

@@ -25,7 +25,7 @@ export const paths: pathType[] = [
   },
   {
     title: "Contacts",
-    path: "/contacts",
+    url: "#contact",
   },
   {
     icon: <GithubIcon boxSize={8} />,

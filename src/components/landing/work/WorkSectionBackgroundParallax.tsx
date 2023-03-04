@@ -12,15 +12,6 @@ export const WorkSectionBackgroundParallax = () => (
         mt="4vh"
       />
     </ParallaxLayer>
-    <ParallaxLayer offset={1} speed={-0}>
-      <Image
-        src={"/assets/landing_page_elements/light_star.svg"}
-        alt="decoration star"
-        h={["12%", "15%", "18%"]}
-        ml="10vw"
-        mt="-15vh"
-      />
-    </ParallaxLayer>
     <ParallaxLayer offset={1} speed={2.5}>
       <Image
         src={"/assets/blue_cloud.svg"}

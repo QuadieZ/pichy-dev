@@ -69,10 +69,17 @@ export const StyledButton = (props: StyledButtonProps) => {
       <Button
         {...(icon && buttonIcon)}
         {...buttonStyles}
-        borderRadius={4}
+        borderRadius="full"
+        px={6}
+        py={2}
+        h="fit-content"
         aria-label={ariaLabel}
+        color="content.secondary"
+        fontWeight="regular"
         {...rest}
-      />
+      >
+        {children}
+      </Button>
     </Container>
   );
 };
