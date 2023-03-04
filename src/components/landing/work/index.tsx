@@ -6,7 +6,7 @@ import {
 } from "@/components/common";
 import { GithubIcon, PaletteIcon } from "@/icons";
 import { SectionProps } from "@/type";
-import { Box, HStack, Image, VStack } from "@chakra-ui/react";
+import { Box, HStack, VStack } from "@chakra-ui/react";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { useRouter } from "next/router";
 import { WorkSectionBackgroundParallax } from "./WorkSectionBackgroundParallax";

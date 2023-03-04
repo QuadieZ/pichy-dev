@@ -1,6 +1,6 @@
 import { StyledButton, Typography } from "@/components/common";
 import { SectionProps } from "@/type";
-import { Flex, HStack, Image, Stack } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { ContactSectionParallax } from "./ContactSectionParallax";
 

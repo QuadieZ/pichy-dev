@@ -29,7 +29,7 @@ export const NavigationBar = () => {
       >
         Pichy.dev
       </Typography>
-      <HStack gap={8} display={["none", "none", "flex", "flex"]}>
+      <HStack display={["none", "none", "flex", "flex"]}>
         {paths?.map((el) => (
           <NavItem key={el.title} {...el} />
         ))}

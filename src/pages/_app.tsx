@@ -7,7 +7,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <Box
         w="100vw"
-        h="100vh"
+        h="fit-content"
+        minH="100vh"
         bgColor="background.primary"
         position="absolute"
         top="0"

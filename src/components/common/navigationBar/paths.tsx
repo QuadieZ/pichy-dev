@@ -8,6 +8,7 @@ export type pathType = {
   url?: string;
   icon?: ReactElement;
   alt?: string;
+  onClick?: () => void;
 };
 
 export const paths: pathType[] = [
@@ -25,7 +26,7 @@ export const paths: pathType[] = [
   },
   {
     title: "Contacts",
-    url: "#contact",
+    url: "/#contact",
   },
   {
     icon: <GithubIcon boxSize={8} />,

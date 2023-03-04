@@ -14,7 +14,8 @@ export const theme = extendTheme({
         content: {
             primary: "#000000",
             secondary: "#425E87",
-            description: "#A6BBD5"
+            description: "#A6BBD5",
+            highlight: "#E59BBA"
         },
         background: {
             primary: "#F8FBFF",
