@@ -1,6 +1,12 @@
-import { MenuCard, MenuCardProps, Typography } from "@/components/common";
+import {
+  MenuCard,
+  MenuCardProps,
+  StyledButton,
+  Typography,
+} from "@/components/common";
+import { GithubIcon, PaletteIcon } from "@/icons";
 import { SectionProps } from "@/type";
-import { Box, HStack, VStack } from "@chakra-ui/react";
+import { Box, HStack, Image, VStack } from "@chakra-ui/react";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { useRouter } from "next/router";
 import { WorkSectionBackgroundParallax } from "./WorkSectionBackgroundParallax";
@@ -51,9 +57,26 @@ export const WorkSection = ({ parallax }: SectionProps) => {
           zIndex={-1}
           onClick={() => parallax.current.scrollTo(2)}
         />
-        <VStack align="flex-start">
+        <VStack
+          align="flex-start"
+          gap={2}
+          w={["80vw", "80vw", "80vw", "60vw"]}
+          pb={["10vh", "8vh", "5vh", "0"]}
+        >
           <Typography variant="h1">{`What I'm working on:`}</Typography>
-          <HStack w={["80vw", "60vw"]}>
+          <HStack align="flex-start" gap={4} w="100%">
+            <VStack>
+              <StyledButton
+                boxSize={["8vh", "8vh", "8vh", "12vh"]}
+                icon={<GithubIcon color="background.secondary" />}
+                href="https://github.com/QuadieZ"
+              />
+              <StyledButton
+                boxSize={["8vh", "8vh", "8vh", "12vh"]}
+                icon={<PaletteIcon color="background.secondary" />}
+                onClick={() => push("/gallery")}
+              />
+            </VStack>
             <VStack flex={1} gap={2}>
               {workMenus.map((menu) => (
                 <MenuCard key={menu.title} {...menu} />

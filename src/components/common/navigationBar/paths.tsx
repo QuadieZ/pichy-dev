@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Image } from "@chakra-ui/react";
+import { GithubIcon } from "@/icons";
 
 export type pathType = {
   title?: string;
@@ -27,7 +28,7 @@ export const paths: pathType[] = [
     path: "/contacts",
   },
   {
-    icon: <Image src="/assets/icons/github.svg" alt="Github icon" />,
+    icon: <GithubIcon boxSize={8} />,
     url: "https://github.com/QuadieZ",
     alt: "Github",
   },
