@@ -18,6 +18,7 @@ export const theme = extendTheme({
         },
         background: {
             primary: "#F8FBFF",
+            secondary: "#7D95B9",
             item: "#ffffff"
         }
     }
