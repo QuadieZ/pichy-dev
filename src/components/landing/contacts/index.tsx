@@ -9,7 +9,7 @@ export const ContactSection = ({ parallax }: SectionProps) => {
     <>
       <ContactSectionParallax />
       <ParallaxLayer
-        offset={2}
+        offset={1}
         speed={1}
         style={{
           display: "flex",

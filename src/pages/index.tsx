@@ -7,9 +7,9 @@ export default function Home() {
 
   return (
     <>
-      <Parallax pages={3} style={{ top: "0", left: "0" }} ref={parallax}>
+      <Parallax pages={2} style={{ top: "0", left: "0" }} ref={parallax}>
         <IntroductionSection parallax={parallax} />
-        <WorkSection parallax={parallax} />
+        {/*<WorkSection parallax={parallax} />*/}
         <ContactSection parallax={parallax} />
       </Parallax>
     </>

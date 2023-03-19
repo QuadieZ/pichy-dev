@@ -16,14 +16,14 @@ export const paths: pathType[] = [
     title: "About",
     path: "/about",
   },
-  {
+  /*{
     title: "Work",
     path: "/work",
   },
   {
     title: "Gallery",
     path: "/gallery",
-  },
+  },*/
   {
     title: "Contacts",
     url: "/#contact",

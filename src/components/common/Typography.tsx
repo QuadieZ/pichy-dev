@@ -40,7 +40,6 @@ export const Typography = (props: TypographyProps) => {
   const { variant = "body3", ...rest } = props;
   const isHeading = ["h1", "h2", "h3", "h4"].includes(variant);
 
-  console.log("test");
   if (isHeading) return <Heading {...typographyStyles[variant]} {...rest} />;
   return <Text {...typographyStyles[variant]} {...rest} />;
 };
