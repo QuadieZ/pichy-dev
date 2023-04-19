@@ -2,8 +2,12 @@ import type { AppProps } from "next/app";
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import { theme } from "@/styles/theme";
 import Head from "next/head";
+import { NavigationBar } from "@/components";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const isHomePage = router.asPath === "/";
   return (
     <ChakraProvider theme={theme}>
       <Head>
@@ -21,6 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
         top="0"
         right="0"
       >
+        {!isHomePage && <NavigationBar />}
         <Component {...pageProps} />
       </Box>
     </ChakraProvider>
