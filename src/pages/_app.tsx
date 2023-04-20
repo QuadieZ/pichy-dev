@@ -6,8 +6,9 @@ import { NavigationBar } from "@/components";
 import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-  const isHomePage = router.asPath === "/";
+  const { asPath } = useRouter();
+  const path = asPath.split("#")[0];
+  const isHomePage = path === "/";
   return (
     <ChakraProvider theme={theme}>
       <Head>
