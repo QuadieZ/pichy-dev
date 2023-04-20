@@ -14,6 +14,7 @@ import {
 import { tagType, WorkCard } from "@/components/work/WorkCard";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { sortDate } from "@/util/sortDate";
 
 const postsDirectory = path.join(process.cwd(), "public/work-posts");
 
@@ -112,6 +113,7 @@ const WorkIndex = ({ postData }: { postData: postDataType[] }) => {
         px={10}
       >
         {postData
+          .sort((a, b) => sortDate(a.date, b.date))
           .filter((post) => (currentFilter ? post.tag == currentFilter : post))
           .map((post) => (
             <GridItem key={post.title}>
