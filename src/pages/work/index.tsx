@@ -15,7 +15,7 @@ import { tagType, WorkCard } from "@/components/work/WorkCard";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const postsDirectory = path.join(process.cwd(), "src/work-posts");
+const postsDirectory = path.join(process.cwd(), "public/work-posts");
 
 export type postDataType = {
   id: string;
