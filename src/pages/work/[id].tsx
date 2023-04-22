@@ -50,11 +50,11 @@ const Work = ({ postData }: { postData: postDataType }) => {
         <Image
           src={postData.image}
           alt={postData.title}
-          h="40vh"
+          maxH="40vh"
           w="100%"
           mt={2}
           mb={6}
-          objectFit="cover"
+          objectFit="contain"
         />
       )}
       <ReactMarkdown components={markdownComponents}>
