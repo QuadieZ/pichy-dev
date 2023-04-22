@@ -20,21 +20,21 @@ export const WorkSection = ({ parallax }: SectionProps) => {
       description: "Work experiences, Competition, Projects",
       src: "/assets/landing_page_elements/work.svg",
       alt: "Working Girl Doodle",
-      onClick: () => push("/work"),
+      onClick: () => push("/work#work"),
     },
     {
       title: "Community",
       description: "Voluntary work and projects for the communtiy",
       src: "/assets/landing_page_elements/community.svg",
       alt: "Girl in hoodie Doodle",
-      onClick: () => push("/work"),
+      onClick: () => push("/work#community"),
     },
     {
       title: "Personal",
       description: "Side projects and exchange experiences",
       src: "/assets/landing_page_elements/personal.svg",
       alt: "Traveling girl Doodle",
-      onClick: () => push("/work"),
+      onClick: () => push("/work#personal"),
     },
   ];
 

@@ -12,3 +12,9 @@ The first time I created this, I had just entered the web development field.
 The concept of framework was still very new to me, and I had little to no knowledge about UX/UI design. \
 After 2 long years, I have finally updated my website. More features coming soon :)
 
+## To Do
+- [x] Add work page
+- [x] Add gallery page
+- [ ] Add information for each work
+- [ ] Gallery markdown components
+- [ ] Advanced work search filter

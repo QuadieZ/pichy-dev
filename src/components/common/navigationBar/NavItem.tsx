@@ -9,7 +9,7 @@ import { pathType } from "./paths";
 export const NavItem = (props: pathType) => {
   const { path, title, icon, url, onClick } = props;
   const { push, asPath } = useRouter();
-  const isActive = asPath == path;
+  const isActive = asPath?.split("#")[0] == path;
 
   const Container = ({ children }: { children: ReactNode }) =>
     url ? (

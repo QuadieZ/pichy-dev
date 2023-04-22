@@ -1,4 +1,4 @@
-import { NavigationBar, StyledButton, Typography } from "@/components";
+import { StyledButton, Typography } from "@/components";
 import { Box, Flex, Image, VStack } from "@chakra-ui/react";
 import { useRef } from "react";
 
@@ -6,8 +6,6 @@ const About = () => {
   const detailRef = useRef<null | HTMLDivElement>(null);
   return (
     <>
-      <NavigationBar />
-
       <Flex
         w="100vw"
         minH="100vh"
