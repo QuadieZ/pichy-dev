@@ -38,9 +38,8 @@ export const typographyStyles: Record<HeadingType | TextType, TextProps> = {
 
 export const Typography = (props: TypographyProps) => {
   const { variant = "body3", ...rest } = props;
-  const isHeading = ["h1", "h2", "h3", "h4"].includes(variant);
+  const isHeading = ["h1", "h2", "h3"].includes(variant);
 
-  console.log("test");
   if (isHeading) return <Heading {...typographyStyles[variant]} {...rest} />;
   return <Text {...typographyStyles[variant]} {...rest} />;
 };

@@ -27,15 +27,23 @@ export const HamburgerNavBar = () => {
       />
       <MenuList>
         {paths.map((el) => {
-          const isActive = asPath == el.path;
-          const Container = ({ children }: { children: ReactNode }) =>
+          const isActive = asPath?.split("#")[0] == el.path;
+          const Container = ({
+            children,
+            title,
+          }: {
+            children: ReactNode;
+            title: string;
+          }) =>
             el.url ? (
-              <Link href={el.url}>{children}</Link>
+              <Link href={el.url} key={title}>
+                {children}
+              </Link>
             ) : (
-              <Fragment>{children}</Fragment>
+              <Fragment key={title}>{children}</Fragment>
             );
           return (
-            <Container key={el.title}>
+            <Container title={el.title ?? ""} key={el.title ?? ""}>
               <MenuItem
                 icon={el.icon}
                 onClick={() => el.path && push(el.path)}

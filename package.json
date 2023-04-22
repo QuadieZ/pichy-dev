@@ -14,7 +14,10 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/quicksand": "^4.5.12",
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
     "@next/font": "13.1.6",
+    "@next/mdx": "^13.3.0",
     "@react-spring/parallax": "^9.7.1",
     "@react-spring/web": "^9.7.1",
     "@types/node": "18.13.0",
@@ -23,9 +26,15 @@
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "framer-motion": "^10.0.1",
+    "fs": "0.0.1-security",
+    "gray-matter": "^4.0.3",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-markdown": "^8.0.7",
+    "rehype-react": "^7.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.2",
     "typescript": "4.9.5"
   }
 }
