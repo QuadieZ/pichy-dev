@@ -13,6 +13,7 @@ export type StyledButtonProps = Omit<ButtonProps, "leftIcon" | "rightIcon"> & {
   icon?: ReactElement;
   iconPosition?: "left" | "right";
   href?: string;
+  openNewTab?: boolean;
 };
 
 const buttonStyles: ChakraProps = {
@@ -32,6 +33,7 @@ export const StyledButton = (props: StyledButtonProps) => {
     iconPosition,
     children,
     href,
+    openNewTab = false,
     "aria-label": ariaLabel = "button",
     ...rest
   } = props;
@@ -43,7 +45,9 @@ export const StyledButton = (props: StyledButtonProps) => {
       <Link
         href={href}
         passHref={true}
-        target={!href.includes("#") ? "_blank" : ""}
+        target={
+          openNewTab || !href.includes("#") || !openNewTab ? "_blank" : ""
+        }
       >
         {children}
       </Link>
