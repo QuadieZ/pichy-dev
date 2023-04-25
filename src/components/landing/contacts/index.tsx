@@ -4,6 +4,14 @@ import { Flex, Image } from "@chakra-ui/react";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { ContactSectionParallax } from "./ContactSectionParallax";
 
+const WebringIcon = () => (
+  <Image
+    alt="วงแหวนเว็บ"
+    src="https://webring.wonderful.software/webring.black.svg"
+    boxSize="16px"
+  />
+);
+
 export const ContactSection = ({ parallax }: SectionProps) => {
   return (
     <>
@@ -47,6 +55,15 @@ export const ContactSection = ({ parallax }: SectionProps) => {
           </StyledButton>
           <StyledButton href="https://www.facebook.com/pichyapa.khanapattanawong.3/">
             Facebook
+          </StyledButton>
+          <StyledButton
+            href="https://webring.wonderful.software#pichy.dev"
+            title="วงแหวนเว็บ"
+            icon={<WebringIcon />}
+            iconPosition="left"
+            openNewTab
+          >
+            Webring
           </StyledButton>
         </Flex>
         <Image
