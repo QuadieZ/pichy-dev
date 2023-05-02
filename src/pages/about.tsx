@@ -1,5 +1,5 @@
 import { StyledButton, Typography } from "@/components";
-import { Box, Flex, Image, VStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, Image, VStack } from "@chakra-ui/react";
 import { useRef } from "react";
 
 const About = () => {
@@ -98,9 +98,14 @@ const About = () => {
           </Typography>
           <VStack align="flex-start">
             <Typography variant="body1">My Resumes</Typography>
-            <StyledButton href="/documents/Resume_Frontend_Pichyapa_Khanapattanawong.pdf">
-              Front-end Development
-            </StyledButton>
+            <HStack>
+              <StyledButton href="/documents/Resume_Frontend_Pichyapa_Khanapattanawong.pdf">
+                Front-end Development
+              </StyledButton>
+              <StyledButton href="/documents/Resume_GameDev_Pichyapa.pdf">
+                Game Development
+              </StyledButton>
+            </HStack>
           </VStack>
         </VStack>
         <Image
