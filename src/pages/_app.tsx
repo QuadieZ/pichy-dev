@@ -4,6 +4,7 @@ import { theme } from "@/styles/theme";
 import Head from "next/head";
 import { NavigationBar } from "@/components";
 import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
@@ -11,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const isHomePage = path === "/";
   return (
     <ChakraProvider theme={theme}>
+      <Analytics />
       <Head>
         <title>Pichy.dev</title>
         <meta name="description" content="Pichy's Personal Website✨" />
