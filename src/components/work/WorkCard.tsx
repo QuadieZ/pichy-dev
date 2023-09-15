@@ -5,7 +5,7 @@ import { Typography } from "../common";
 
 export type WorkCardType = {
   title: string;
-  image?: string;
+  image?: string | string[];
   tag: string;
   href: string;
 } & BoxProps;
@@ -21,13 +21,15 @@ export const tagColor: Record<tagType, ChakraProps> = {
     bg: "#F5C0A2",
   },
   personal: {
-    bg: "white",
+    bg: "#FFF1CD",
   },
 };
 
 export const WorkCard = (props: WorkCardType) => {
   const { title, image, href, tag, children, ...rest } = props;
+  const imagePath = Array.isArray(image) ? image[0] : image;
   const router = useRouter();
+
   return (
     <HStack
       bg="background.item"
@@ -37,16 +39,16 @@ export const WorkCard = (props: WorkCardType) => {
       h="30vh"
       justify="space-between"
       borderRadius="20px"
-      //cursor="pointer"
+      cursor="pointer"
       _hover={{
         bg: "background.primary",
       }}
       overflow="hidden"
-      //onClick={() => router.push(`work/${href}`)}
+      onClick={() => router.push(`work/${href}`)}
       {...rest}
     >
       <Image
-        src={image ?? "/assets/work/placeholder.png"}
+        src={imagePath ?? "/assets/work/placeholder.png"}
         w="100%"
         h="100%"
         objectFit="cover"

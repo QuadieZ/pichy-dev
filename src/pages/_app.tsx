@@ -4,6 +4,7 @@ import { theme } from "@/styles/theme";
 import Head from "next/head";
 import { NavigationBar } from "@/components";
 import { useRouter } from "next/router";
+import "../styles/swiper.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
