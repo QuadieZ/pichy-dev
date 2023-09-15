@@ -37,12 +37,12 @@ export const WorkCard = (props: WorkCardType) => {
       h="30vh"
       justify="space-between"
       borderRadius="20px"
-      //cursor="pointer"
+      cursor="pointer"
       _hover={{
         bg: "background.primary",
       }}
       overflow="hidden"
-      //onClick={() => router.push(`work/${href}`)}
+      onClick={() => router.push(`work/${href}`)}
       {...rest}
     >
       <Image
