@@ -96,9 +96,9 @@ const About = () => {
           >
             {`I'm open for part-time jobs and internship opportunity!`}
           </Typography>
-          <VStack align="flex-start">
+          <VStack align="flex-start" w="100%">
             <Typography variant="body1">My Resumes</Typography>
-            <HStack>
+            <HStack width="100%" flexWrap="wrap" justify="flex-start" gap={2}>
               <StyledButton href="/documents/Resume_Frontend_Pichyapa_Khanapattanawong.pdf">
                 Front-end Development
               </StyledButton>

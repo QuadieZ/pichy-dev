@@ -48,6 +48,10 @@ export const StyledButton = (props: StyledButtonProps) => {
         target={
           openNewTab || !href.includes("#") || !openNewTab ? "_blank" : ""
         }
+        style={{
+          WebkitMarginStart: 0,
+          marginInlineStart: 0,
+        }}
       >
         {children}
       </Link>
