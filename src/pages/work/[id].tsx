@@ -40,7 +40,7 @@ const Work = ({ postData }: { postData: postDataType }) => {
           <ChevronLeftIcon
             boxSize="24px"
             cursor="pointer"
-            onClick={() => router.back()}
+            onClick={() => router.push("/work")}
           />
           <Typography variant="h1">{postData.title}</Typography>
           <Typography

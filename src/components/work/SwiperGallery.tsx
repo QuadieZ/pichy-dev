@@ -37,7 +37,7 @@ export const SwiperGallery = (props: SwiperGalleryProps) => {
       modules={[EffectCoverflow, Pagination, Autoplay]}
     >
       {images.map((image) => (
-        <SwiperSlide>
+        <SwiperSlide key={image}>
           <Image src={image} />
         </SwiperSlide>
       ))}
