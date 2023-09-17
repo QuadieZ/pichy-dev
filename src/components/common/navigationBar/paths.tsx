@@ -31,6 +31,6 @@ export const paths: pathType[] = [
   {
     icon: <GithubIcon boxSize={8} />,
     url: "https://github.com/QuadieZ",
-    alt: "Github",
+    alt: "GitHub",
   },
 ];
