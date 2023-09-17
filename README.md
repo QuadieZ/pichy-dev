@@ -15,6 +15,6 @@ After 2 long years, I have finally updated my website. More features coming soon
 ## To Do
 - [x] Add work page
 - [x] Add gallery page
-- [ ] Add information for each work
-- [ ] Gallery markdown components
+- [x] Add information for each work
+- [x] Gallery markdown components
 - [ ] Advanced work search filter
