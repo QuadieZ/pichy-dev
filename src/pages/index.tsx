@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Parallax, IParallax } from "@react-spring/parallax";
 import { ContactSection, IntroductionSection, WorkSection } from "@/components";
+import { sortDateString } from "@/util/sortDateString";
 
 export default function Home() {
   const parallax = useRef<IParallax>(null!);
