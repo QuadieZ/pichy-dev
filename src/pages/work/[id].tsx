@@ -53,7 +53,10 @@ const Work = ({ postData }: { postData: postDataType }) => {
             {postData.tag}
           </Typography>
         </HStack>
-        <Text>{postData.date}</Text>
+        <Text>
+          {postData.startDate && `${postData.startDate} - `}
+          {postData.date}
+        </Text>
       </HStack>
       {Array.isArray(postData.image) ? (
         <SwiperGallery images={postData.image} />
