@@ -99,8 +99,8 @@ const About = () => {
           <VStack align="flex-start" w="100%">
             <Typography variant="body1">My Resumes</Typography>
             <HStack width="100%" flexWrap="wrap" justify="flex-start" gap={2}>
-              <StyledButton href="/documents/Resume_Frontend_Pichyapa_Khanapattanawong.pdf">
-                Front-end Development
+              <StyledButton href="/documents/Resume_Fullstack_Pichyapa_Khanapattanawong.pdf">
+                Full-stack Development
               </StyledButton>
               <StyledButton href="/documents/Resume_GameDev_Pichyapa.pdf">
                 Game Development
