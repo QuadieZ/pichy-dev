@@ -13,11 +13,13 @@ export const NavItem = (props: pathType) => {
 
   const Container = ({ children }: { children: ReactNode }) =>
     url ? (
-      <Link href={url} target={!url.includes("#") ? "_blank" : ""}>
+      <Link href={url} target={!url.includes("#") ? "_blank" : ""} key={path}>
         {children}
       </Link>
     ) : (
-      <Flex onClick={() => onClick ?? (path && push(path))}>{children}</Flex>
+      <Flex onClick={() => onClick ?? (path && push(path))} key={path}>
+        {children}
+      </Flex>
     );
 
   return (
