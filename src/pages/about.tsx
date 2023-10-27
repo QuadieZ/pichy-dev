@@ -82,10 +82,10 @@ const About = () => {
               From there, with my passion for programming and innovations, I've worked my way
               up as a front-end developer, working as a UI engineer for one year.
               Currently, I'm pursuing Computer Engineering Bachelor's Degree and 
-              my interest in game development. I'm open for part-time jobs and internship opportunity!
+              my interest in game development. 
             `}
           </Typography>
-          <Typography
+          {/*<Typography
             color="content.highlight"
             fontWeight="semibold"
             onClick={() =>
@@ -95,7 +95,7 @@ const About = () => {
             cursor="pointer"
           >
             {`I'm open for part-time jobs and internship opportunity!`}
-          </Typography>
+          </Typography>*/}
           <VStack align="flex-start" w="100%">
             <Typography variant="body1">My Resumes</Typography>
             <HStack width="100%" flexWrap="wrap" justify="flex-start" gap={2}>
@@ -105,6 +105,7 @@ const About = () => {
               <StyledButton href="/documents/Resume_GameDev_Pichyapa.pdf">
                 Game Development
               </StyledButton>
+              <StyledButton href="/documents/CV.pdf">Academics CV</StyledButton>
             </HStack>
           </VStack>
         </VStack>

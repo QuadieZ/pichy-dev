@@ -33,4 +33,15 @@ export const paths: pathType[] = [
     url: "https://github.com/QuadieZ",
     alt: "GitHub",
   },
+  {
+    icon: (
+      <Image
+        src="/assets/icons/medium_primary.png"
+        alt="medium icon"
+        boxSize={8}
+      />
+    ),
+    url: "https://medium.com/@pichy_kh",
+    alt: "Medium",
+  },
 ];

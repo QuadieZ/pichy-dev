@@ -6,7 +6,7 @@ import {
 } from "@/components/common";
 import { GithubIcon, PaletteIcon } from "@/icons";
 import { SectionProps } from "@/type";
-import { Box, HStack, VStack } from "@chakra-ui/react";
+import { Box, HStack, Image, VStack } from "@chakra-ui/react";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { useRouter } from "next/router";
 import { WorkSectionBackgroundParallax } from "./WorkSectionBackgroundParallax";
@@ -70,6 +70,13 @@ export const WorkSection = ({ parallax }: SectionProps) => {
                 boxSize={["8vh", "8vh", "8vh", "12vh"]}
                 icon={<GithubIcon color="background.secondary" />}
                 href="https://github.com/QuadieZ"
+              />
+              <StyledButton
+                boxSize={["8vh", "8vh", "8vh", "12vh"]}
+                icon={
+                  <Image src="/assets/icons/medium.png" alt="medium icon" />
+                }
+                href="https://medium.com/@pichy_kh"
               />
               <StyledButton
                 boxSize={["8vh", "8vh", "8vh", "12vh"]}
