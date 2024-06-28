@@ -19,8 +19,8 @@ export const ReviewSwiper = (props: ReviewSwiperProps) => {
       centeredSlides={true}
       slidesPerView={1}
       autoplay={{
-        delay: 2500,
-        disableOnInteraction: true,
+        delay: 5000,
+        disableOnInteraction: false,
       }}
       pagination={{
         dynamicBullets: true,
