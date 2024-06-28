@@ -5,7 +5,7 @@ export const ContactSectionParallax = () => {
   return (
     <>
       <ParallaxLayer
-        offset={2}
+        offset={3}
         speed={-0.2}
         style={{ width: "fit-content", height: "fit-content" }}
       >
@@ -18,7 +18,7 @@ export const ContactSectionParallax = () => {
         />
       </ParallaxLayer>
       <ParallaxLayer
-        offset={2}
+        offset={3}
         speed={-0}
         style={{ width: "fit-content", height: "fit-content" }}
       >
