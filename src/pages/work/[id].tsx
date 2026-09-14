@@ -9,19 +9,23 @@ import { useRouter } from "next/router";
 import { tagColor, tagType } from "@/components/work/WorkCard";
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const paths = await getAllPostIds();
   return {
     paths,
-    fallback: false,
+    fallback: "blocking",
   };
 }
 
 export async function getStaticProps({ params }: GetStaticPropsContext) {
   const postData = await getPostData(params?.id as string);
+  if (!postData) {
+    return { notFound: true };
+  }
   return {
     props: {
       postData,
     },
+    revalidate: 60,
   };
 }
 
@@ -58,12 +62,12 @@ const Work = ({ postData }: { postData: postDataType }) => {
           {postData.date}
         </Text>
       </HStack>
-      {Array.isArray(postData.image) ? (
+      {postData.image && postData.image.length > 1 ? (
         <SwiperGallery images={postData.image} />
       ) : (
-        postData.image && (
+        postData.image?.[0] && (
           <Image
-            src={postData.image}
+            src={postData.image[0]}
             alt={postData.title}
             maxH="40vh"
             w="100%"

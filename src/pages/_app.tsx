@@ -11,6 +11,12 @@ export default function App({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
   const path = asPath.split("#")[0];
   const isHomePage = path === "/";
+  const isStudioRoute = path.startsWith("/studio");
+
+  if (isStudioRoute) {
+    return <Component {...pageProps} />;
+  }
+
   return (
     <ChakraProvider theme={theme}>
       <Analytics />

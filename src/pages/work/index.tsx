@@ -1,7 +1,4 @@
 import { Typography } from "@/components";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import {
   Box,
   Flex,
@@ -14,10 +11,13 @@ import {
 import { tagType, WorkCard } from "@/components/work/WorkCard";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { sortDate } from "@/util/sortDate";
 import { sortDateString } from "@/util/sortDateString";
-
-const postsDirectory = path.join(process.cwd(), "public/work-posts");
+import { client } from "../../../sanity/lib/client";
+import {
+  workPostBySlugQuery,
+  workPostSlugsQuery,
+  workPostsQuery,
+} from "../../../sanity/lib/queries";
 
 export type postDataType = {
   id: string;
@@ -25,52 +25,24 @@ export type postDataType = {
   title: string;
   startDate?: string;
   date: string;
-  image?: string;
+  image?: string[];
   tag: tagType;
 };
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+export async function getAllPostIds() {
+  const ids: { id: string }[] = await client.fetch(workPostSlugsQuery);
 
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.mdx$/, ""),
-      },
-    };
-  });
+  return ids.map(({ id }) => ({
+    params: { id },
+  }));
 }
 
-export function getAllPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    const fullPath = path.join(postsDirectory, `${fileName}`);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-
-    const matterResult = matter(fileContents);
-
-    return {
-      id: fileName.replace(/\.mdx$/, ""),
-      content: matterResult.content,
-      ...matterResult.data,
-    };
-  });
-
-  return allPostsData;
+export async function getAllPostsData(): Promise<postDataType[]> {
+  return client.fetch(workPostsQuery);
 }
 
-export function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.mdx`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-
-  // getting metadata
-  const matterResult = matter(fileContents);
-
-  return {
-    id,
-    content: matterResult.content,
-    ...matterResult.data,
-  };
+export async function getPostData(id: string): Promise<postDataType> {
+  return client.fetch(workPostBySlugQuery, { slug: id });
 }
 
 const WorkIndex = ({ postData }: { postData: postDataType[] }) => {
@@ -142,6 +114,7 @@ export async function getStaticProps() {
     props: {
       postData,
     },
+    revalidate: 60,
   };
 }
 
